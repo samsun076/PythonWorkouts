@@ -1,17 +1,19 @@
 import random
 
 def guessing_game():
-    user_guess = int(input("guess a number: "))
-    attempt = 0
-    number = random.randint(0, 101)
-    print(type(number))
-    print(type(user_guess))
-    print(number, " your number is ", user_guess)
-    while user_guess != number:
-        if user_guess < number:
-            number = int(input("your number is too low, Try again: "))
-            print(number)
-        elif user_guess > number:
-            number = int(input("your number is too high, Try again: "))
-            print(number)
+    answer = random.randint(0,100)
+    print(answer)
+    
+    while True:
+        user_guess = int(input("Guess a Number: "))
+        if user_guess == answer:
+            print("Success, you correctly selected the random number ", answer)
+            break
+        elif user_guess < answer:
+            print("your guess of ", user_guess, " is too low, Please try again")
+        else:
+            print("your guess of ", user_guess, " is too HIGH, try again")
+            
+
 guessing_game()
+
