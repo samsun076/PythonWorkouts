@@ -25,12 +25,12 @@ def pig_latin():
 
 
 # BOOK SOLUTION
-def pig_latin2(phrase):
-    if phrase[0] in 'aeiou':
-        return f'{phrase}way'
-    return f'{phrase[1:]}{phrase[0]}ay'
+def pig_latin2(word):
+    if word[0] in 'aeiou':
+        return f'{word}way'
+    return f'{word[1:]}{word[0]}ay'
 
 print(pig_latin())
 print()
-print(pig_latin2("another"))
-print(pig_latin2("david"))
+print(pig_latin2("Another"))
+print(pig_latin2("David"))
