@@ -16,3 +16,5 @@ hex_output('1357')
 hex_output('ff')
 hex_output('3eafd')
 
+
+https://www.askpython.com/python/built-in-methods/python-chr-and-ord-methods
