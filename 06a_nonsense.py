@@ -3,8 +3,9 @@ Take a text file, creating (and printing) a nonsensical sentence from the nth wo
 """
 
 def nonsense(file):
-    with open(file) as f:
-        for line in f:
-            print(line, end='')
+    for index, line in enumerate(open(file)):
+        words = line.split()
+        if words:
+            print(index, words[0])
 
 nonsense('text_file.txt')
