@@ -7,7 +7,7 @@ Write a function that takes a list or tuple of numbers. Return a two-element lis
 def sum_odds_evens(my_list):
     return [sum(t[0::2]), sum(t[1::2])]
 
-
+#issues with using and reproducing the book solution. 03/16/22.
 def sum_odds_evens1(numbers):
     evens = []
     odds = []
