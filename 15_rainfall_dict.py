@@ -28,7 +28,7 @@ New York: 7
 
 """
 
-
+# MY SOLUTION
 def get_rainfall():
     city_rainfall = {}
     while True:
@@ -38,9 +38,16 @@ def get_rainfall():
             break
 
         amount = input('enter the amount of rainfall in mm: ').strip()
-         
+        
+        # setdefault used in my solution
         city_rainfall.setdefault(city, 0)
         city_rainfall[city] += int(amount)
-        print(city_rainfall)
+    
+        # Book solution
+        # alternatively the dict.get method can be used with two arguments
+        # city_rainfall[city] = city_rainfall.get(city, 0) + int(amount)
 
+        # defaultdict from collections can be imported and used as well.
+    for k, v in city_rainfall.items():
+        print(f'{k}: {v}')
 get_rainfall()
